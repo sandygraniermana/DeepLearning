@@ -17,9 +17,11 @@ Voici quelques uns des scripts :
 - dyadem_2018.R et dyadem_2019 : contient toutes les commandes
 - dyadem_percep.py : contient l'entraînement 
 
+
 - annotation_perceptron.R : contient toutes les fonctions
 - cmd_annot_percept.R : contient toutes les commandes
 - dyadem_percep.py : contient l'entraînement 
+
 
 - annotation_percept_3000cell.R : contient toutes les fonctions
 - cmd_annot_percept : contient toutes les commandes
