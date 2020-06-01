@@ -2,7 +2,6 @@
 ######################################### fonctions pour annotation perceptron ###################################
 
 
-#les commandes sont dans le fichier : "/home/data/SG/cmd_annot_percep.R"
 
 
 library("flowCore")
@@ -257,12 +256,12 @@ train_taille_modif <- function(K=5){
   
   reticulate::source_python('/home/workspace/toys/dyadem_percep_JS.py')
   
-  scalefactor<-rep(NA,6) #pour les col 1 à 6
+  scalefactor<-rep(NA,6) #pour les colonnes de 1 à 6
   for (i in 1:6){
     scalefactor[i]<-quantile(Dataset[,i],probs = 0.9)
     Dataset[,i]<-Dataset[,i]/scalefactor[i]
   }
-  k <- k_means(Dataset[which(DATASET==11),1:24],K)$cluster
+  k <- k_means(Dataset[which(DATASET==11),1:24],K)$cluster #cluster sur population contenant les cellules non identifiées
   k[k!=1]=k[k!=1]+max(DATASET)-1
   k[k==1]=11
   DATASET[DATASET==11]=k
