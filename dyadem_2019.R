@@ -30,16 +30,16 @@ visua = vis(annot,a) # scaffold vs manuelle
 
 #pre_rec1 = precision_recall_ann_a(ann, a)
 
+#tests de performances
 pre_recE = precision_recall_ann_a_E(ann, a)
 
 pre_rec2 = precision_recall_ann_annot(ann, annot)
 
 pre_rec3 = precision_recall_ann_annot(annot, a)
 
-
+#score F1
 ref.vec = a
 run.vec = ann
-
 F1 = Compute.F1(ref.vec, run.vec)
 
 prcf = pre_rec_cellAnnot_F1_ann_annot(ann, annot)
@@ -51,5 +51,6 @@ prcf3 = pre_rec_cellAnnot_ann_annot(ann,annot)
 
 prcf4 = pre_rec_cellAnnot_a_annot(a,annot)
 
+#moyennes des tests
 c = colMeans(prcf3[-11,4:5])
 c1 = colMeans(prcf4[-11,4:5])
