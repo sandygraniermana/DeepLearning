@@ -17,7 +17,7 @@ encoding_dim3 = 64
 
 #fonction perceptron
 
-def neuralnet(Data, pop, neuralnet=None): #Data -> input, pop -> derniere colonne des donnees (15 pop)
+def neuralnet(Data, pop, neuralnet=None): #Data -> input, pop -> annotations
   
   es = EarlyStopping(monitor='val_loss', mode='min', restore_best_weights=True, patience=20) #termine training avant overfitting
   
