@@ -11,7 +11,6 @@ library("FlowCIPHE")
 
 ### traitement des data ###
 
-
 #NA
 
 na_data <- function(flow.frame){
